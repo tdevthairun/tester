@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "next build"
   publish = ".next"
 
 [template.environment]
@@ -7,4 +7,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-

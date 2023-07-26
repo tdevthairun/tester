@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[template.environment]
+  LIFF_ID = "2000229530-3GNnrNAx"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+

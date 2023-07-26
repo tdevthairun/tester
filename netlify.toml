@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
 
 [template.environment]
   LIFF_ID = "2000229530-3GNnrNAx"

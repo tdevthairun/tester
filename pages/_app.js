@@ -22,14 +22,20 @@ function MyApp({ Component, pageProps }) {
           console.log(liff.getVersion());
           console.log(liff.isInClient());
           console.log(liff.isLoggedIn());
-          console.log(liff.getProfile());
+          
           console.log(liff.getOS());
           console.log(liff.getLineVersion());
           if (!liff.isLoggedIn() && !liff.isInClient()) {
+            
             window.alert('To get an access token, you need to be logged in. Tap the "login" button below and try again.');
         } else {
+            const profile = liff.getProfile();
             const accessToken = liff.getAccessToken();
+            const idToken = liff.getIDToken();
+            console.log(idToken);
             console.log(accessToken);
+            console.log(profile);
+            
         }
         })
         .catch((error) => {

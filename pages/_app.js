@@ -7,13 +7,12 @@ function MyApp({ Component, pageProps }) {
 
   // Execute liff.init() when the app is initialized
   useEffect(() => {
-    console.log("what");
     // to avoid `window is not defined` error
     import("@line/liff").then((liff) => {
       console.log("start liff.init()...");
       liff
         .init({ 
-          liffId: "2000229530-3GNnrNAx",
+          liffId: process.env.LIFF_ID,
           withLoginOnExternalBrowser: true
          })
         .then(() => {
@@ -23,6 +22,7 @@ function MyApp({ Component, pageProps }) {
           console.log(liff.getVersion());
           console.log(liff.isInClient());
           console.log(liff.isLoggedIn());
+          console.log(liff.getProfile());
           console.log(liff.getOS());
           console.log(liff.getLineVersion());
           if (!liff.isLoggedIn() && !liff.isInClient()) {

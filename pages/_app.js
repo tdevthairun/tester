@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           withLoginOnExternalBrowser: true
          })
         .then(() => {
-          console.log("liff.init() done");
+          console.log("liff.init() done.e...");
           setLiffObject(liff);
           console.log(liff.getLanguage());
           console.log(liff.getVersion());
